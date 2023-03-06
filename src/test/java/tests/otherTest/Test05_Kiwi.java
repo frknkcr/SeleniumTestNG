@@ -41,20 +41,22 @@ public class Test05_Kiwi {
         Driver.getDriver().findElement(By.xpath("(//*[@preserveAspectRatio='xMidYMid meet'])[29]")).click();
         WebElement kalkis= Driver.getDriver().findElement(By.xpath("(//input[@data-test='SearchField-input'])[1]"));
         kalkis.sendKeys("Istanbul");
-        ReusableMethods.sleep(3);
+
         Driver.getDriver().findElement(By.xpath("(//div[@data-test='PlacePickerRow-wrapper'])[1]")).click();
         WebElement varis= Driver.getDriver().findElement(By.xpath("(//input[@data-test='SearchField-input'])[2]"));
         varis.sendKeys("Varsova");
-        ReusableMethods.sleep(3);
+        ReusableMethods.sleep(2);
         Driver.getDriver().findElement(By.xpath("(//div[@data-test='PlacePickerRow-wrapper'])[1]")).click();
         Driver.getDriver().findElement(By.xpath("//input[@data-test='SearchFieldDateInput']")).click();
-        ReusableMethods.sleep(3);
+
         Driver.getDriver().findElement(By.xpath("//div[@data-value='2023-03-16']")).click();
         Driver.getDriver().findElement(By.xpath("//*[text()='Tarihleri ayarla']")).click();
 
         // Gidis tarihi kismina erisim saglayarak gidecegimiz gunu secelim ve booking i iptal edelim
         Driver.getDriver().findElement(By.xpath("//*[text()='Booking.com ile konaklama arayın']")).click();
         Driver.getDriver().findElement(By.xpath("//a[@data-test='LandingSearchButton']")).click();
+
+        Driver.closeDriver();
 
     }
 }
